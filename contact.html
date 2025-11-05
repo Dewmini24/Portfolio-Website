@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact|Dewmini Pathirana</title>
+        <link rel="stylesheet" href="stylesheet/style.css">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">DP</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Page Header-->
+        <header class="page-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p></p>
+            </div>
+        </header>
+
+        <!--Contact Content-->
+        <main class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!--Message Form-->
+                    <section class="message-form-section">
+                        <h2>Send me a message</h2>
+                        <form class="message-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Name<span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email<span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject<span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="project">Project Proposal</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message<span class="required">*</span></label>
+                                <textarea id="message" name="message" required placeholder="Write your message"></textarea> 
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                                <label for="newsletter">Subscribe to my newsletter for updates</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </section>
+
+                    <!--Newsletter Subscription-->
+                    <section class="newsletter-section">
+                        <h2>Subscribe to Newsletter</h2>
+                        <p>To stay updated with my latest blog posts, projects and more join!</p>
+
+                        <form class="newsletter-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="newsletter-name">Name</label>
+                                <input type="text" id="newsletter-name" name="newsletter-name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newsletter-email">Email<span class="required">*</span></label>
+                                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Interests</label>
+                                <div class="checkbox-list">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="int-html" name="interests" value="html">
+                                        <label for="int-html">HTML & CSS</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="int-js" name="interests" value="js">
+                                        <label for="int-js">JavaScript</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="int-design" name="interests" value="design">
+                                        <label for="int-design">Web Designing</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="int-projects" name="interests" value="projects">
+                                        <label for="int-projects">New Project Updates</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email Frequency</label>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" id="weekly" name="frequency" value="weekly">
+                                        <label for="weekly">Weekly</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="monthly" name="frequency" value="monthly" checked>
+                                        <label for="monthly">Monthly</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-secondary">Join</button>
+                        </form>
+
+                        <div class="contact-info">
+                            <h3>Other  way to connect</h3>
+                            <ul>
+                                <li><strong>Location:</strong> No.159/119 Jayamawatha, Mirigama, Sri Lanka</li>
+                                <li><strong>University:</strong> Informatics Institute of Technology (IIT Campus)</li>
+                                <li><strong>Phone:</strong> +94 766658159</li>
+                                <li><strong>Responsive Time:</strong> Usually within 24-48 hours</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+
+        <!--Footer Section-->
+        <footer class="main-footer">
+            <div class="container">
+                <p>&copy; 2025 Dewmini Pathirana. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/">LinkedIn</a>
+                    <a href="https://github.com/Dewmini24">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
