@@ -1,151 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home|Dewmini Pathirana</title>
-        <link rel="stylesheet" href="stylesheet/style.css">
-    </head>
-    <body>
-        <!--Navigation Bar-->
-        <nav class="main-nav">
-            <div class="container">
-                <div class="logo">DP</div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <!--Intro Section-->
-        <header class="intro">
-            <div class="container">
-                <div class="intro-content">
-                    <p class="greeting">Hi, I'm</p>
-                    <h1 class="intro-title">Dewmini Pathirana</h1>
-                    <p class="intro-subtitle">Frontend Developer</p>
-                    <div class="intro-buttons">
-                        <a href="about.html" class="btn btn-primary">View More</a>
-                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewmini Pathirana — Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-logo" href="#" onclick="showPage('home')">DP</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active" data-page="home" onclick="showPage('home');return false">Home</a></li>
+                <li><a href="#" data-page="about" onclick="showPage('about');return false">About</a></li>
+                <li><a href="#" data-page="blog" onclick="showPage('blog');return false">Blog</a></li>
+                <li><a href="#" data-page="contact" onclick="showPage('contact');return false">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════ HOME PAGE ═══════════════════════ -->
+    <div class="page active" id="page-home">
+        <header class="hero">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="hero-tag">Frontend Developer &amp; CS Student</p>
+                    <h1 class="hero-name">Dewmini<br><em>Pathirana</em></h1>
+                    <p class="hero-sub">Building beautiful, responsive web experiences</p>
+                    <p class="hero-desc">Computer Science undergraduate at University of Westminster, passionate about
+                        crafting accessible, user-centered interfaces with JavaScript, React, and modern web
+                        technologies.</p>
+                    <div class="hero-btns">
+                        <a href="#" class="btn-primary" onclick="showPage('about');return false">Explore My Work</a>
+                        <a href="#" class="btn-ghost" onclick="showPage('contact');return false">Get In Touch</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">3+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">3</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">2yr</div>
+                            <div class="stat-label">Coding</div>
+                        </div>
                     </div>
                 </div>
-                <div class="intro-image">
-                    <img src="images/Dewmini-Home.png" alt="home page image  of  Dewmini Pathirana">
+                <div class="hero-img-wrap">
+                    
+                    <div class="hero-img-placeholder">
+                        <img src="images/Dewmini-Home.png" alt="Dewmini Pathirana" class="hero-img">
+                    </div>
                 </div>
             </div>
         </header>
 
-        <!--Skills Section-->
-        <section class="skills" id="skills">
-            <div class="container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skills-card">
-                        <div class="skills-icon">HTML5</div>
-                        <h3>HTML5</h3>
-                        <p></p>
-                    </div>
-                    <div class="skills-card">
-                        <div class="skills-icon">CSS</div>
-                        <h3>CSS</h3>
-                        <p></p>
-                    </div>
-                    <div class="skills-card">
-                        <div class="skills-icon">JS</div>
-                        <h3>JavaScript</h3>
-                        <p></p>
-                    </div>
-                    <div class="skills-card">
-                        <div class="skills-icon">React</div>
-                        <h3>React</h3>
-                        <p></p>
-                    </div>
-                    <div class="skills-card">
-                        <div class="skills-icon">Java</div>
-                        <h3>Java</h3>
-                        <p></p>
-                    </div>
-                    <div class="skills-card">
-                        <div class="skills-icon">Python</div>
-                        <h3>python</h3>
-                        <p></p>
-                    </div>
+        <!-- Skills -->
+        <section class="section fade-in">
+            <p class="section-label">What I work with</p>
+            <h2 class="section-title">My <em>Skills</em></h2>
+            <div class="divider"></div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">HTML</div>
+                    <div class="skill-name">HTML5</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">CSS</div>
+                    <div class="skill-name">CSS3</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">JS</div>
+                    <div class="skill-name">JavaScript</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚛</div>
+                    <div class="skill-name">React.js</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">Node</div>
+                    <div class="skill-name">Node.js</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">Ex</div>
+                    <div class="skill-name">Express.js</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☕</div>
+                    <div class="skill-name">Java</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">DB</div>
+                    <div class="skill-name">MongoDB</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">SQL</div>
+                    <div class="skill-name">SQL</div>
                 </div>
             </div>
         </section>
 
-        <!--Education Section-->
-        <section class="education" id="education">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="education-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>BSc(Hons) Computer Science</h3>
-                            <p class="university">University of Westminster</p>
-                            <p class="period">2024 - 2028</p>
-                            <p class="description">Specialization in Web Development</p>
-                        </div>
+        <!-- Education -->
+        <div class="section-bg">
+            <div class="section fade-in">
+                <p class="section-label">Academic Background</p>
+                <h2 class="section-title">My <em>Education</em></h2>
+                <div class="divider"></div>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-period">2024 — 2028 (Expected)</div>
+                        <div class="tl-title">BSc (Hons) Computer Science</div>
+                        <div class="tl-place">University of Westminster · Informatics Institute of Technology, Sri Lanka
+                        </div><span class="tl-desc">Specialization in Web Development | Software Engineering</span></div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-period">2023 — 2024</div>
+                        <div class="tl-title">Foundation Certificate in Higher Education — IT</div>
+                        <div class="tl-place">Informatics Institute of Technology, Sri Lanka</div>
+                        <span class="tl-desc">Grade: Merit · Artificial Intelligence &amp; Data Science</span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Foundation Certificate in Higher Education</h3>
-                            <p class="university">Informatics Institute of Technology (IIT Campus)</p>
-                            <p class="period">2023 - 2024</p>
-                            <p class="description">Artifical Intelligence and Data Science</p>
-                        </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-period">2020 — 2023</div>
+                        <div class="tl-title">Advanced Level</div>
+                        <div class="tl-place">Bandaranayake Central College, Veyangoda</div>
+                        <span class="tl-desc">Physical Science Stream</span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Advanced Level</h3>
-                            <p class="university">Bandaranayake Central College, Veyangoda</p>
-                            <p class="period">2020 - 2023</p>
-                            <p class="description">Physical Science Stream</p>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <section class="section fade-in">
+            <p class="section-label">Achievements</p>
+            <h2 class="section-title">Certifi<em>cations</em></h2>
+            <div class="divider"></div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-org">LinkedIn Learning</div>
+                    <div class="cert-title">HTML Essential Training</div>
+                    <div class="cert-year">2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-org">LinkedIn Learning</div>
+                    <div class="cert-title">Python Practice: Operations</div>
+                    <div class="cert-year">2025</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-org">IIT Campus</div>
+                    <div class="cert-title">Professional Certificate in Machine Learning</div>
+                    <div class="cert-year">2025</div>
                 </div>
             </div>
         </section>
 
-        <!--Certification Section-->
-        <section class="certifications" id="certifications">
-            <div class="container">
-                <h2 class="section-title">Certifications</h2>
-                <div class="cert-grid">
-                    <div class="cert-card">
-                        <h3>HTML Essential Training</h3>
-                        <p class="organization">LinkedIn Learning</p>
-                        <p class="comp-year">2025</p>
+        <!-- Projects -->
+        <div class="section-bg">
+            <div class="section fade-in">
+                <p class="section-label">Selected Work</p>
+                <h2 class="section-title">Academic <em>Projects</em></h2>
+                <div class="divider"></div>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-type">Full-Stack · Real-Time</div>
+                        <div class="project-title">EduMath LK — AI Learning Platform</div>
+                        <div class="project-desc">A synchronized virtual classroom platform enabling real-time
+                            collaboration between teachers and students, featuring live whiteboard updates and scalable
+                            backend APIs.</div>
+                        <ul class="project-points">
+                            <li>Architected real-time sync using Socket.io for low-latency whiteboard updates between
+                                teacher and student interfaces</li>
+                            <li>Built the Teacher Management Dashboard from scratch — responsive UI with dynamic class
+                                scheduling</li>
+                            <li>Designed RESTful APIs with Node.js &amp; Express.js, handling complex CRUD operations
+                                with MongoDB</li>
+                            <li>Debugged concurrent WebSocket bottlenecks, improving stability during high-traffic live
+                                sessions</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Socket.io</span><span class="tag">React.js</span><span
+                                class="tag">Node.js</span><span class="tag">Express.js</span><span
+                                class="tag">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/Tharumika/edumathlk" class="project-link" target="_blank">View on
+                            GitHub →</a>
                     </div>
-                    <div class="cert-card">
-                        <h3>Python Practice: Operations</h3>
-                        <p class="organization">LinkedIn Learning</p>
-                        <p class="comp-year">2025</p>
-                    </div>
-                    <div class="cert-card">
-                        <h3>Machine Learning</h3>
-                        <p class="organization">Informatics Institute of Technology (IIT Campus)</p>
-                        <p class="comp-year">2025</p>
+                    <div class="project-card">
+                        <div class="project-type">Backend · REST API</div>
+                        <div class="project-title">Smart Campus REST API</div>
+                        <div class="project-desc">A RESTful API for a Smart Campus system built with JAX-RS (Jersey),
+                            implementing room and sensor management with structured JSON responses following REST
+                            principles.</div>
+                        <ul class="project-points">
+                            <li>Built using JAX-RS (Jersey) with Maven &amp; Tomcat deployment</li>
+                            <li>Implemented nested resources for room/sensor management with thread-safe in-memory
+                                storage</li>
+                            <li>Custom exception handling and structured JSON responses following REST best practices
+                            </li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Java</span><span class="tag">JAX-RS</span><span
+                                class="tag">Jersey</span><span class="tag">Maven</span><span
+                                class="tag">Tomcat</span><span class="tag">JSON</span>
+                        </div>
+                        <a href="https://github.com/Dewmini24/SmartCampusAPI" class="project-link" target="_blank">View
+                            on GitHub →</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!--Footer Section-->
-        <footer class="main-footer">
-            <div class="container">
-                <p>&copy; 2025 Dewmini Pathirana. All rights reserved.</p>
+        <footer>
+            <div class="footer-inner">
+                <span class="footer-logo">DP</span>
+                <span class="footer-copy">© 2025 Dewmini Pathirana. All rights reserved.</span>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/">LinkedIn</a>
-                    <a href="https://github.com/Dewmini24">GitHub</a>
+                    <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Dewmini24" target="_blank">GitHub</a>
                 </div>
             </div>
         </footer>
-    </body>
+    </div>
+
+    <!-- ═══════════════════════ ABOUT PAGE ═══════════════════════ -->
+    <div class="page" id="page-about">
+        <div class="section">
+            <p class="section-label">Get to know me</p>
+            <h1 class="section-title">About <em>Me</em></h1>
+            <div class="divider"></div>
+            <div class="about-grid">
+                <div>
+                    <div class="about-img-wrap">
+                        
+                        <div class="about-img-placeholder">
+                            <img src="images/Dewmini-About.png" alt="Dewmini Pathirana" style="width:100%;border-radius:24px;object-fit:cover">
+                        </div>
+                        <div class="about-img-accent">
+                            <div class="about-img-accent-num">L5</div>
+                            <div class="about-img-accent-label">Level 5<br>CS Student</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="section-label" style="margin-top:0">Hello!</p>
+                    <h2
+                        style="font-family:var(--ff-serif);font-size:2rem;color:#f0eaec;margin-bottom:1.25rem;line-height:1.2">
+                        I'm <em style="color:var(--rose);font-style:italic">Dewmini</em>...</h2>
+                    <p style="color:#9e9094;line-height:1.9;margin-bottom:1rem;font-size:0.95rem">I'm a Computer Science
+                        undergraduate at the University of Westminster (studying at IIT Campus, Sri Lanka), currently in
+                        Level 5. My primary focus spans frontend and backend development, building responsive,
+                        accessible, and user-friendly web experiences.</p>
+                    <p style="color:#9e9094;line-height:1.9;font-size:0.95rem">With hands-on experience in HTML, CSS,
+                        JavaScript, and React on the frontend, and Node.js, Express, and MongoDB on the backend, I enjoy
+                        the full creative and technical process of bringing ideas to life on the web.</p>
+                    <h3
+                        style="font-family:var(--ff-serif);font-size:1.2rem;color:#f0eaec;margin-top:2rem;margin-bottom:0.75rem">
+                        What I Value</h3>
+                    <ul class="about-values-list">
+                        <li>Clean, semantic, and maintainable code</li>
+                        <li>People-first approach combined with accessibility for everyone</li>
+                        <li>Mobile-first, responsive design built to fit every screen</li>
+                        <li>Continuous learning and improving step by step</li>
+                        <li>Collaboration and knowledge sharing</li>
+                    </ul>
+                    <div style="margin-top:2rem">
+                        <a href="#" class="btn-primary" onclick="showPage('contact');return false">Let's Work
+                            Together</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:5rem">
+                <p class="section-label">My approach</p>
+                <h2 class="section-title">My <em>Journey</em></h2>
+                <div class="divider"></div>
+                <div class="journey-cards">
+                    <div class="journey-card">
+                        <div class="journey-card-icon">💻</div>
+                        <div class="journey-card-title">Student Developer</div>
+                        <div class="journey-card-text">I blend classroom learning with hands-on projects, treating every
+                            assignment as a chance to master real-world skills and push my abilities forward.</div>
+                    </div>
+                    <div class="journey-card">
+                        <div class="journey-card-icon">📚</div>
+                        <div class="journey-card-title">Continuous Learner</div>
+                        <div class="journey-card-text">Technology evolves fast and so do I — from online courses to
+                            certifications, I stay current with emerging tools, frameworks, and best practices.</div>
+                    </div>
+                    <div class="journey-card">
+                        <div class="journey-card-icon">🧩</div>
+                        <div class="journey-card-title">Problem Solver</div>
+                        <div class="journey-card-text">I approach complex challenges analytically, breaking them down
+                            into manageable steps and combining creative thinking with solid technical structure.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-inner">
+                <span class="footer-logo">DP</span>
+                <span class="footer-copy">© 2025 Dewmini Pathirana. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Dewmini24" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ═══════════════════════ BLOG PAGE ═══════════════════════ -->
+    <div class="page" id="page-blog">
+        <div class="section">
+            <p class="section-label">Thoughts &amp; Learnings</p>
+            <h1 class="section-title">My <em>Blog</em></h1>
+            <div class="divider"></div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-cat">Projects</span>
+                        <time class="blog-date" datetime="2025-10-15">October 15, 2025</time>
+                    </div>
+                    <h2 class="blog-title">My First Website: A Journey into Web Development</h2>
+                    <p class="blog-excerpt">Building my first site felt thrilling but tough — it kicked off my path in
+                        web dev. I can still picture myself facing an empty HTML document, unsure how to turn it into
+                        something real and good-looking.</p>
+                    <p class="blog-excerpt">The experience taught me that planning ahead really pays off. Drawing rough
+                        wireframes by hand gave me a clear picture of how everything fits together, which made writing
+                        real code far easier. CSS felt like a game changer — Flexbox and Grid opened up new
+                        possibilities, turning tricky layouts into something manageable. Seeing my site work smoothly
+                        across phones and computers gave a genuine sense of achievement.</p>
+                    <p class="blog-excerpt">To anyone just starting out: it's okay to make mistakes. Your first site
+                        doesn't need to be perfect. What counts is jumping in, staying curious, and having fun shaping
+                        things your own way.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">HTML</span>
+                        <span class="blog-tag">CSS</span>
+                        <span class="blog-tag">Learning</span>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-cat">Tutorial</span>
+                        <time class="blog-date" datetime="2025-10-28">October 28, 2025</time>
+                    </div>
+                    <h2 class="blog-title">Understanding Responsive Design: Media Queries and Beyond</h2>
+                    <p class="blog-excerpt">Responsive design is essential in a world where people browse on phones,
+                        tablets, laptops, and widescreen monitors alike. My journey into it started with discovering
+                        media queries — those handy CSS blocks that let you adapt layouts based on screen size, aspect
+                        ratio, or device orientation.</p>
+                    <p class="blog-excerpt">What I eventually learned is that responsive design isn't just about
+                        slapping on media queries. It's about building layouts that bend naturally to any screen. CSS
+                        Grid and Flexbox make this far more elegant — letting designs reflow on their own without piling
+                        up endless breakpoints. Testing on real devices matters enormously too; Chrome's simulator
+                        helps, but watching your page come alive on an actual phone reveals issues you'd never catch
+                        otherwise.</p>
+                    <p class="blog-excerpt">The biggest takeaway: plan for small screens first. Starting mobile-first
+                        forces you to prioritize what truly matters and leads to smarter design choices across the
+                        board.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Responsive Design</span>
+                        <span class="blog-tag">Media Queries</span>
+                        <span class="blog-tag">Best Practices</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-inner">
+                <span class="footer-logo">DP</span>
+                <span class="footer-copy">© 2025 Dewmini Pathirana. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Dewmini24" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ═══════════════════════ CONTACT PAGE ═══════════════════════ -->
+    <div class="page" id="page-contact">
+        <div class="section">
+            <p class="section-label">Say hello</p>
+            <h1 class="section-title">Get In <em>Touch</em></h1>
+            <div class="divider"></div>
+            <div class="contact-grid">
+                <div>
+                    <p style="color:#8c7f82;line-height:1.8;margin-bottom:2rem;font-size:0.95rem">I'm always open to
+                        hearing about new projects, opportunities, or just a friendly chat about web development. Feel
+                        free to reach out!</p>
+                    <div class="contact-info-wrap">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-val">Mirigama, Sri Lanka</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div>
+                                <div class="contact-item-label">Phone</div>
+                                <div class="contact-item-val">+94 766 658 159</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div>
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-val">dewminipathirana04@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🏫</div>
+                            <div>
+                                <div class="contact-item-label">University</div>
+                                <div class="contact-item-val">IIT Campus (University of Westminster)</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">⏱</div>
+                            <div>
+                                <div class="contact-item-label">Response Time</div>
+                                <div class="contact-item-val">Usually within 24–48 hours</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/" target="_blank"
+                            class="social-btn">🔗 LinkedIn</a>
+                        <a href="https://github.com/Dewmini24" target="_blank" class="social-btn">💻 GitHub</a>
+                    </div>
+                    <div class="newsletter-card">
+                        <div class="newsletter-title">Stay Updated</div>
+                        <div class="newsletter-sub">Subscribe for blog posts, projects, and more.</div>
+                        <div class="newsletter-row">
+                            <input type="email" class="newsletter-input" placeholder="your@email.com">
+                            <button class="newsletter-btn" onclick="handleNewsletterSubmit()">Join</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <h2 style="font-family:var(--ff-serif);font-size:1.5rem;color:#f0eaec;margin-bottom:1.75rem">Send a
+                        Message</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-name">Name *</label>
+                            <input type="text" id="c-name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-email">Email *</label>
+                            <input type="email" id="c-email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-subject">Subject *</label>
+                        <select id="c-subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="project">Project Proposal</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Message *</label>
+                        <textarea id="c-message" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button class="submit-btn" type="button" onclick="handleContactSubmit()">Send Message ✦</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-inner">
+                <span class="footer-logo">DP</span>
+                <span class="footer-copy">© 2025 Dewmini Pathirana. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/dewmini-pathirana-28558a332/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Dewmini24" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
 </html>
